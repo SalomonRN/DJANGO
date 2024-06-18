@@ -1,0 +1,14 @@
+# Entorno virtual
+venv/
+
+# Ja
+__pycache__
+
+# Carpeta de migraciones
+migrations
+
+.env
+
+notas.txt
+
+db.sqlite3
