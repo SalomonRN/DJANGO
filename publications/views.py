@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 def first_view(request):
-    return HttpResponse("<h1>HOLA MUNDO!</h1>")
+    return render(request, "/index.html")
 
 def gmail_view(request):
     return HttpResponse("<h1>HOLA MUNDO!</h1>")

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'publications'
+    ''
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,15 @@ if not DEBUG:
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MODELOS DONDE DJANGO VA A BUSCAR PARA PODER AUTENTICAR UN USUARIO
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend', # Propia de base de datos(?
+    'social_core.backends.google.GoogleOAuth2', 
+    'social_core.backends.facebook.FacebookOAuth2', #
+    'social_core.backends.twitter.TwitterOAuth',
+]
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '940683294500-0iapqmri4faug5nr1n0l1k81p8t2jgmg.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
