@@ -22,4 +22,5 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('publications.urls', namespace="publications")),
+    path('social-auth/',include('social_django.urls', namespace='social')),
 ]
