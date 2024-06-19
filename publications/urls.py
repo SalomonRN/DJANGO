@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import first_view, gmail_view
+from .views import first_view, gmail_view, dashboard
 
 app_name = "publications"
 
